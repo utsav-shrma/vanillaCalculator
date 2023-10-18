@@ -31,11 +31,16 @@ let buttonPress=(buttonCharacter)=>{
     } else {
         let lastCharacter=currString[currString.length-1];
         console.log(lastCharacter);
-        if((lastCharacter==='+'||lastCharacter==='/'||lastCharacter=='*'||lastCharacter=='-'||lastCharacter=='.')&&(buttonCharacter === '+' || buttonCharacter === '*' || buttonCharacter === '/' || buttonCharacter === '.' || buttonCharacter==='-')){
+        if((lastCharacter==='+'||lastCharacter==='/'||lastCharacter=='*'||lastCharacter=='-'||lastCharacter=='.')&&(buttonCharacter === '+' || buttonCharacter === '*' || buttonCharacter === '/' || buttonCharacter === '.')){
             alert('Two consecutive characters can\'t be speacial character');
         }
         else{
-            currentDisplay.innerHTML = currString + buttonCharacter;
+            if(lastCharacter==='-' && buttonCharacter==='-'){
+                alert('Two consecutive characters can\'t be speacial character');
+            }
+            else{
+                currentDisplay.innerHTML = currString + buttonCharacter;
+            }
         }
         
     }  
