@@ -15,9 +15,6 @@ body{
 }
 
 #container p{
-    width: 536px;
-}
-#container p{
     font-family: Inter;
     font-size: 28px;
     font-weight: 800;
@@ -27,13 +24,14 @@ body{
     color: white;
     padding: 0%;
     margin: 0%;
+    width: 536px;
 
 }
-#display{
+#display-container{
     width: 536px;
     height: 142.73px;
     border-radius: 12px;
-    background-color: #181F32;;
+    background-color: #181F32;
     box-shadow: 0px 4px 4px 0px #00000040;
     display: flex;
     justify-content: center;
@@ -44,7 +42,7 @@ body{
 
 }
 
-#display p{
+#display-container p{
     font-family: Segoe UI;
     font-size: 55px;
     font-weight: 900;
@@ -53,9 +51,30 @@ body{
     text-align: right;
     color: white;
     margin: 20px;
+    overflow-x:auto ;
+    
 
 }
-
+::-webkit-scrollbar {
+    
+    height: 5px;
+    width: auto;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: grey;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3B4664; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black; 
+  }
 
 button{
     width: 100px;
